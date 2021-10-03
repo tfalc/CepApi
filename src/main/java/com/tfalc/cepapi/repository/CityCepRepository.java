@@ -1,6 +1,6 @@
 package com.tfalc.cepapi.repository;
 
-import com.tfalc.cepapi.model.CityCep;
+import com.tfalc.cepapi.service.CityCep;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
