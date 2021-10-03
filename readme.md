@@ -16,7 +16,7 @@ Given CEP above are not in the same range.
 
 Above given CEP are in the same range due to duplicated "*20000000*"
 
-How it should work
+## How it should work
 
 ![](https://github.com/tfalc/CepApi/blob/main/src/main/resources/img/UMLCase.png)
 
