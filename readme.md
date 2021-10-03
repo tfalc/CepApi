@@ -18,7 +18,7 @@ Above given CEP are in the same range due to duplicated "*20000000*"
 
 How it should work
 
-![](Z:\TIC\DevGeral\VagaGlobalSys\UMLCase.png)
+![](https://github.com/tfalc/CepApi/blob/main/src/main/resources/img/UMLCase.png)
 
 ## Tecnologies used:
 
