@@ -12,7 +12,7 @@ public class CityCepEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String Cep;
-    private String CityName
+    private String CityName;
 
     public void FindByCep(final Long id, final String Cep, final String CityName) {
         this.id = id;
