@@ -14,7 +14,11 @@ Given CEP above are not in the same range.
 | 10000000  | 20000000   |
 | 20000000  | 30000000   |
 
-Above given CEP are in the same range due to duplicated "20000000"
+Above given CEP are in the same range due to duplicated "*20000000*"
+
+How it should work
+
+![](Z:\TIC\DevGeral\VagaGlobalSys\UMLCase.png)
 
 ## Tecnologies used:
 
