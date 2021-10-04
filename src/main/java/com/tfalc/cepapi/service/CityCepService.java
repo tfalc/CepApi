@@ -36,12 +36,13 @@ public class CityCepService {
     public CityCep updateCity(Long cityId, CityCep cityDetails)
             throws NotFoundException, ResourceNotFoundException {
         CityCep cityCep = getCityByCep(cityId);
+        cityDetails.setId(cityId);
         cityCep.setCityCep(cityDetails.getCityCep());
         cityCep.setCityName(cityDetails.getCityName());
         cityCep.setFaixaInicial(cityDetails.getFaixaInicial());
         cityCep.setFaixaFinal(cityDetails.getFaixaFinal());
 
-        createCity(cityCep);
+        cityCep = cityCepRepository.save(cityCep);
 
         return cityCep;
     }
