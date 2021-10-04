@@ -72,7 +72,7 @@ public class CityCepController {
         } catch (NotFoundException e) {
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
-                    .build();
+                    .body("CEP " + cityDetails.getCityCep() + " de ID " + cityId + " não encontrado!");
         } catch (ResourceNotFoundException e){
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
