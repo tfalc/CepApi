@@ -76,7 +76,7 @@ public class CityCepController {
         } catch (ResourceNotFoundException e){
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
-                    .build();
+                    .body(new ResourceNotFoundException(e.getMessage()));
         }
     }
 
