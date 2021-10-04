@@ -36,7 +36,7 @@ public class CityCepController {
     public ResponseEntity<CityCep> getCityByCep(@PathVariable(value = "id") Long cityId)
             throws NotFoundException {
         try {
-            CityCep cityCep = cityCepService.getCityByCep(cityId);
+            CityCep cityCep = cityCepService.getCityById(cityId);
             return ResponseEntity
                     .ok()
                     .body(cityCep);
