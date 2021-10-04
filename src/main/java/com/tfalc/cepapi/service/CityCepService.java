@@ -25,7 +25,7 @@ public class CityCepService {
 
     public CityCep getCityByCep(Long cityId) throws NotFoundException {
         return cityCepRepository.findById(cityId)
-                .orElseThrow(() -> new NotFoundException("ID de CEP " + cityId + " não encontrado."));
+                .orElseThrow(() -> new NotFoundException("CEP de ID " + cityId + " não encontrado."));
     }
 
     public CityCep createCity(CityCep cityCep) throws ResourceNotFoundException {
