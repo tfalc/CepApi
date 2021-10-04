@@ -23,7 +23,7 @@ public class CityCepService {
         return cityCepList;
     }
 
-    public CityCep getCityByCep(Long cityId) throws NotFoundException {
+    public CityCep getCityById(Long cityId) throws NotFoundException {
         return cityCepRepository.findById(cityId)
                 .orElseThrow(() -> new NotFoundException("CEP de ID " + cityId + " não encontrado."));
     }
@@ -35,7 +35,7 @@ public class CityCepService {
 
     public CityCep updateCity(Long cityId, CityCep cityDetails)
             throws NotFoundException, ResourceNotFoundException {
-        CityCep cityCep = getCityByCep(cityId);
+        CityCep cityCep = getCityById(cityId);
         cityDetails.setId(cityId);
         cityCep.setCityCep(cityDetails.getCityCep());
         cityCep.setCityName(cityDetails.getCityName());
@@ -48,7 +48,7 @@ public class CityCepService {
     }
 
     public void deleteCityCep(Long cityId) throws ResourceNotFoundException, NotFoundException {
-        CityCep cityCep = getCityByCep(cityId);
+        CityCep cityCep = getCityById(cityId);
         cityCepRepository.delete(cityCep);
     }
 
