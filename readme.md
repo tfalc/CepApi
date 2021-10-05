@@ -27,3 +27,4 @@
 - Jpa
 - Lombok
 - PostgreSQL
+- Postman (for testing purpose)
