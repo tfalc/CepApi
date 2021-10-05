@@ -28,6 +28,10 @@ public class CityCepService {
                 .orElseThrow(() -> new NotFoundException("CEP de ID " + cityId + " não encontrado."));
     }
 
+    public CityCep getCityByCep(Long cityCep) throws NotFoundException{
+        return cityCepRepository.getById(cityCep);
+    }
+
     public CityCep createCity(CityCep cityCep) throws ResourceNotFoundException {
         validateCep(cityCep);
         return cityCepRepository.save(cityCep);
