@@ -7,7 +7,11 @@ import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import static com.fasterxml.jackson.databind.type.LogicalType.Map;
 
 @Service
 public class CityCepService {
@@ -29,6 +33,7 @@ public class CityCepService {
     }
 
     public CityCep getCityByCep(Long cityCep) throws NotFoundException{
+        Map<Long, Long> cityCepFinder = new HashMap<Long, Long>();
         return cityCepRepository.getById(cityCep);
     }
 
@@ -60,7 +65,7 @@ public class CityCepService {
         List<CityCep> validateCep = getAllCityCep();
 
         if(cityCep.getFaixaInicial() > cityCep.getFaixaFinal()){
-            throw new ResourceNotFoundException("CEP inical maior do que o finial!");
+            throw new ResourceNotFoundException("CEP inicial maior do que o final!");
         }
 
         for (CityCep cepValidation : validateCep) {
